@@ -116,6 +116,3 @@ function distSetting(graphs,alpha,allCO,allCE,allRmaxs,allRmaxt,trials,cardS,clu
     end
 
 end
-
-
-

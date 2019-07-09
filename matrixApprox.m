@@ -122,7 +122,3 @@ function matrixApprox(graphs,alpha,allRmaxsO,allRmaxtO,allRmaxtE,allCO,allCE,tri
     end
     
 end
-
-
-
-

@@ -68,10 +68,3 @@ function [piHat,totalW] = mcmcMultiJnt(G,rS,alpha,wMult)
         repelem(1:cardS,w),repelem(1./w,w),G.n,cardS);
     
 end
-
-
-
-
-
-
-

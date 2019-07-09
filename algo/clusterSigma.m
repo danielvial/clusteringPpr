@@ -53,5 +53,3 @@ function assign = clusterSigma(sigma_s,k)
     end
                 
 end
-
-

@@ -82,5 +82,3 @@ function processGraph(graph,uOrD)
     save([graph '.mat'],'G');
     
 end
-
-

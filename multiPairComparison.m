@@ -76,6 +76,3 @@ function multiPairComparison(graphs,alpha,allRmaxsO,allRmaxtO,allRmaxtE,allCO,al
     end
 
 end
-
-
-
