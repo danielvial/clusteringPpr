@@ -3,5 +3,6 @@ algo/.DS_Store
 data/.DS_Store
 results/.DS_Store
 data/*.mat
+data/*.txt
 data/gaimc/
 results/*.mat

@@ -42,7 +42,7 @@ For example, assuming *Slashdot0902* has been pre-processed as above, running
 highPrecisionEstimate({'Slashdot0902'},50,0.2,1,10);
 singlePairComparison({'Slashdot0902'},0.2,2e-3,12.2e-3,4.2e-3,7,17);
 ```
-from the main directory will test the Section 4 algorithms for 50 source/target pairs. Here the input parameters are those used in our experiments (see preprint Table 2). Runtime/accuracy results can be viewed by typing
+from the main directory will test the Section 4 algorithms for 50 source/target pairs. Here the algorithmic parameters are those used in our experiments (see preprint Table 2). Runtime/accuracy results can be viewed by typing
 ```
 load results/Slashdot0902_spc.mat;
 disp(mean(error(:,:,1),2)');
@@ -58,8 +58,8 @@ indicating that both algorithms had (on average) ~11% relative error and ~9ms ru
 ### Multiple pair algorithms (scalar viewpoint)
 Preprint Section 5.1 considers PPR estimation for multiple source/target pairs (with scalar accuracy guarantees). These can be tested via *multiPairComparison.m*. For example, assuming *Slashdot0902* has been pre-processed as above, running
 ```
-multiPairComparison({'Slashdot0902'},0.2,2e-3,12.2e-3,4.2e-3,7,17,5,50,'uni',1)
-multiPairComparison({'Slashdot0902'},0.2,2e-3,12.2e-3,4.2e-3,7,17,5,50,'clust',1)
+multiPairComparison({'Slashdot0902'},0.2,2e-3,12.2e-3,4.2e-3,7,17,5,50,'uni',1);
+multiPairComparison({'Slashdot0902'},0.2,2e-3,12.2e-3,4.2e-3,7,17,5,50,'clust',1);
 ```
 will test the algorithms for 5 trials of 50 source/target pairs each, again using preprint Table 2 parameters. Loading/viewing the results via
 ```
@@ -101,7 +101,7 @@ should yield something like
 2.4649
 2.4296
 ```
-indicating the oracle and heuristic methods in Section 7 are >2x faster than the baseline method (similar to preprint Figure 10). See *distSetting.m* code comments for more details.
+indicating the oracle and heuristic methods in Section 7 are ~2-2.5x faster than the baseline method (similar to preprint Figure 10). See *distSetting.m* code comments for more details.
 
 ### Final note
-The tests above use much smaller source/target sets and far fewer trials than the experiments in the preprint, so as to decrease runtime. Consequently, results may differ from those shown here. However, if these tests are scaled up to the level of the preprint, they should be similar, as the preprint shows our empirical findings are quite statistically significant.
+The tests above use much smaller source/target sets and far fewer trials than the experiments in the preprint (our goal was simply to validate the code with reasonably low runtime). Consequently, results may differ from those shown here, and from those in the preprint. However, if these tests are scaled up to the level of the preprint, they should be similar, as the preprint shows our empirical findings are statistically significant.
