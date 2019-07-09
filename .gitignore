@@ -1,4 +1,7 @@
+.DS_Store
 algo/.DS_Store
+data/.DS_Store
+results/.DS_Store
 data/*.mat
 data/gaimc
 results/*.mat

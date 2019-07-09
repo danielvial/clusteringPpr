@@ -1,1 +1,1 @@
-once tests are run, results will be placed in this directory; see main README for details
+Once tests are run, results will be placed in this directory; see main README for details.

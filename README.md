@@ -1,6 +1,6 @@
-﻿This repository contains code for D. Vial, V. Subramanian, "On the role of clustering in Personalized PageRank estimation," which considers the relationship between Personalized PageRank (PPR) estimation complexity and clustering in the underlying graph. A [preprint](https://arxiv.org/abs/1706.01091) is available on arXiv. 
+This repository contains code for D. Vial, V. Subramanian, "On the role of clustering in Personalized PageRank estimation," which considers the relationship between Personalized PageRank (PPR) estimation complexity and clustering in the underlying graph. A [preprint](https://arxiv.org/abs/1706.01091) is available on arXiv. 
 
-As a disclaimer, the code may be confusing without the preprint; however, code comments reference relevant sections of the preprint, so it need not be read/understood in its entirety. If questions persist, my email can be found in the preprint.
+As a disclaimer, the code may be confusing without the preprint. However, code comments reference relevant sections of the preprint, so the preprint need not be read/understood in its entirety. If questions persist, my email can be found in the preprint.
 
 ## Overview
 
