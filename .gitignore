@@ -1,9 +1,12 @@
+# DS_Store files
 .DS_Store
 algo/.DS_Store
 data/.DS_Store
 results/.DS_Store
+# datasets/results from local tests
 data/*.mat
 data/*.txt
-data/gaimc/
 results/*.mat
 largerSynthetic/
+# point to fileexchange for gaimc
+data/gaimc/
