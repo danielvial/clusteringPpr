@@ -27,8 +27,9 @@ More specifically, *data/Slashdot0902.mat* contains a MATLAB struct *G* composed
 - *G.Nout* and *G.Nin* are cell arrays containing out- and in-neighbors
 
 This custom format is useful because the only graph accesses required by our algorithms are degree and neighbor lookups.
+
 ### Synthetic graphs
-The paper also contains empirical results for [Erdos-Renyi graphs](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model) and the [stochastic block model](https://en.wikipedia.org/wiki/Stochastic_block_model). The *data* directory contains code to generate these graphs and save them in the appropriate format. In particular, running `directConnectEr(n,p)` from the *data* directory will generate the graph format described above, for a directed E-R  graph of *n* nodes with edge probability *p*. Running `directConnectSbm(n,c,p,q)` will do the same, but for an SBM with *n* nodes, *c* communities, intra-community edge probability *p*, and inter-community edge probability *q*. See *data/directConnectEr.m*, *data/directConnectSbm.m*, and preprint Appendix H for more details.
+The paper also contains empirical results for [Erdos-Renyi graphs](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model) and the [stochastic block model](https://en.wikipedia.org/wiki/Stochastic_block_model). The *data* directory contains code to generate these graphs and save them in the appropriate format. In particular, running `directConnectEr(n,p)` from the *data* directory will generate the graph format described above, for a directed/strongly-connected E-R  graph of *n* nodes with edge probability *p*. Running `directConnectSbm(n,c,p,q)` will do the same, but for an SBM with *n* nodes, *c* communities, intra-community edge probability *p*, and inter-community edge probability *q*. See *data/directConnectEr.m*, *data/directConnectSbm.m*, and preprint Appendix H for more details.
 
 ## Notes on experiments
 
