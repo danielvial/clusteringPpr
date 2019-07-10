@@ -6,3 +6,4 @@ data/*.mat
 data/*.txt
 data/gaimc/
 results/*.mat
+largerSynthetic/
