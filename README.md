@@ -57,7 +57,7 @@ which should yield something like
 indicating that both algorithms had (on average) ~11% relative error and ~9ms runtime (similar to preprint Table 2). See *highPrecisionEstimate.m*, *singlePairComparison.m* code comments for more details.
 
 ### Multiple pair algorithms (scalar viewpoint)
-Preprint Section 5.1 considers PPR estimation for multiple source/target pairs (with scalar accuracy guarantees). These can be tested via *multiPairComparison.m*. For example, assuming *Slashdot0902* has been pre-processed as above, running
+Preprint Section 5.1 considers PPR estimation for multiple source/target pairs (with scalar accuracy guarantees). These can be tested via *multiPairComparison.m*. For example, assuming *Slashdot0902* has been pre-processed as above,
 ```
 multiPairComparison({'Slashdot0902'},0.2,2e-3,12.2e-3,4.2e-3,7,17,5,50,'uni',1);
 multiPairComparison({'Slashdot0902'},0.2,2e-3,12.2e-3,4.2e-3,7,17,5,50,'clust',1);
@@ -77,7 +77,7 @@ should yield something like
 indicating our scheme is ~1.3x faster than the baseline when pairs are sampled uniformly, and ~3.5x faster when sampled clustered (similar to preprint Figure 7). See *multiPairComparison.m* code comments for further details.
 
 ### Multiple pair algorithms (matrix viewpoint)
-Preprint Section 5.2 is similar to Section 5.1 but adopts a matrix approximation viewpoint. These algorithms can be tested via *matrixApprox.m*. For example, running
+Preprint Section 5.2 is similar to Section 5.1 but adopts a matrix approximation viewpoint. These algorithms can be tested via *matrixApprox.m*. For example,
 ```
 matrixApprox({'Slashdot0902'},0.2,2e-3,12.2e-3,4.2e-3,7,17,5,5);
 load results/Slashdot0902_ma.mat;
@@ -91,7 +91,7 @@ should yield something like
 indicating our algorithms are ~2-2.5x faster than the baseline (similar to preprint Figure 9). See *matrixApprox.m* code comments for further details.
 
 ### Distributed setting
-Preprint Section 7 considers a distributed estimation setting; the corresponding script is *distSetting.m*.  For example, running
+Preprint Section 7 considers a distributed estimation setting; the corresponding script is *distSetting.m*.  For example,
 ```
 distSetting({'Slashdot0902'},0.2,7,17,2e-3,12.2e-3,5,50,5,5);
 load results/Slashdot0902_ds.mat;
