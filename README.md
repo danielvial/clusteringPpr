@@ -38,12 +38,12 @@ Preprint Section 4 contains algorithms to estimate PPR for a single source/targe
 1. Run *highPrecisionEstimate.m* with desired parameters. This estimates PPR values to high precision (most graphs on SNAP are too large to actually compute PPR) for accuracy evaluation. Results are saved in *results/{graph name}_hpe.mat*.
 2. Run *singlePairComparison.m* with desired parameters. This runs the algorithms from preprint Section 4, using the results of Step 1 to evaluate accuracy. Results are saved in *results/{graph name}_spc.mat*.
 
-For example, assuming *Slashdot0902* has been pre-processed as above, running
+For example, assuming *Slashdot0902* has been pre-processed as above,
 ```
 highPrecisionEstimate({'Slashdot0902'},50,0.2,1,10);
 singlePairComparison({'Slashdot0902'},0.2,2e-3,12.2e-3,4.2e-3,7,17);
 ```
-from the main directory will test the Section 4 algorithms for 50 source/target pairs. Here the algorithmic parameters are those used in our experiments (see preprint Table 2). Runtime/accuracy results can be viewed by typing
+will test the Section 4 algorithms for 50 source/target pairs. Here the algorithmic parameters are those used in our experiments (see preprint Table 2). Runtime/accuracy results can be viewed by typing
 ```
 load results/Slashdot0902_spc.mat;
 disp(mean(error(:,:,1),2)');
