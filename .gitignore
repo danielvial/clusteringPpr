@@ -7,6 +7,6 @@ results/.DS_Store
 data/*.mat
 data/*.txt
 results/*.mat
-largerSynthetic/
+syn_*.m
 # point to fileexchange for gaimc
 data/gaimc/
