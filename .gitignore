@@ -6,6 +6,7 @@ results/.DS_Store
 # datasets/results from local tests
 data/*.mat
 data/*.txt
+data/direct*.m
 results/*.mat
 syn_*.m
 # point to fileexchange for gaimc
