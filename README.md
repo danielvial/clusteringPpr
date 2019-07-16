@@ -5,7 +5,7 @@ As a disclaimer, the code will be confusing without the preprint. However, comme
 ## Overview
 First, a brief explanation of the sub-directories:
 - *algo* contains the underlying algorithms used in our experiments
-- *data* contains code that pre-processes real datasets and generates synthetic datasets; once datasets are processed/generated, they are also saved in this directory
+- *data* contains code that processes datasets; once datasets are processed, they are also saved in this directory
 - *results* will contain experimental output
 
 The remaining files in this directory are MATLAB scripts used for experiments in the preprint. Generally, these scripts proceed as follows: first, a graph (or set of graphs) is loaded from the *data* directory; next, experiments are run using code from the *algo* directory; finally, the output is saved as a *.mat* file in the *results* directory.
@@ -13,7 +13,7 @@ The remaining files in this directory are MATLAB scripts used for experiments in
 See below for further notes on datasets and experiments.
 
 ## Notes on datasets
-### Real graphs
+
 Our experiments use graphs from the [Stanford Network Analysis Project](http://snap.stanford.edu) (SNAP); all are available [here](http://snap.stanford.edu/data/index.html). SNAP publishes these as *.txt* edge-list files (i.e. each line contains two integers, corresponding to two nodes that share an edge). Our code requires that these are first processed as a particular *.mat* file (details below). Among other things, the pre-processing extracts the largest strongly-connected component from the graph, for which we use [David Gleich](https://www.cs.purdue.edu/homes/dgleich/)'s Graphs Algorithms in MATLAB Code (gaimc). The pre-processing described below assumes the *data* directory contains the *gaimc* directory, available [here](https://www.mathworks.com/matlabcentral/fileexchange/24134-gaimc-graph-algorithms-in-matlab-code) on MATLAB's File Exchange.
 
 To explain the pre-processing, we use SNAP's *Slashdot-0902* graph (the smallest/most manageable graph considered in the paper). The basic workflow is as follows:
@@ -27,9 +27,6 @@ More specifically, *data/Slashdot0902.mat* contains a MATLAB struct *G* composed
 - *G.Nout* and *G.Nin* are cell arrays containing out- and in-neighbors
 
 This format is useful because the only graph accesses required by our algorithms are degree and neighbor lookups.
-
-### Synthetic graphs
-The paper also contains empirical results for [Erdos-Renyi graphs](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model) and the [stochastic block model](https://en.wikipedia.org/wiki/Stochastic_block_model). The *data* directory contains code to generate these graphs and save them in the appropriate format. In particular, running `directConnectEr(n,p)` from the *data* directory will generate the graph format described above, for a directed/strongly-connected E-R  graph of *n* nodes with edge probability *p*. Running `directConnectSbm(n,c,p,q)` will do the same, but for an SBM with *n* nodes, *c* communities, intra-community edge probability *p*, and inter-community edge probability *q*. See *data/directConnectEr.m*, *data/directConnectSbm.m*, and preprint Appendix H for more details.
 
 ## Notes on experiments
 
