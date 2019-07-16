@@ -11,3 +11,5 @@ results/*.mat
 syn_*.m
 # point to fileexchange for gaimc
 data/gaimc/
+# other stuff
+old_README.md
